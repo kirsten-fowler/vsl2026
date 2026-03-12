@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VSL | Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-stone-50 font-serif">
+    <nav class="p-6 border-b bg-white flex justify-between uppercase text-xs tracking-widest">
+        <a href="index.html" class="font-bold">Map</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="person-anne.html">People</a>
+    </nav>
+    <div class="max-w-6xl mx-auto p-8">
+        <h1 class="text-3xl italic mb-8">Visual Landscape</h1>
+        <div id="map" class="h-[500px] rounded-lg border shadow-inner"></div>
+        <p class="mt-4 text-stone-500 text-sm italic">Click the marker to explore Masjid an-Noor.</p>
+    </div>
+    <script>
+        const map = L.map('map').setView([33.7888, -118.3121], 12);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
+        const marker = L.marker([33.7888, -118.3121]).addTo(map);
+        marker.bindPopup("<b class='font-serif'>Masjid an-Noor</b><br><br><a href='place-masjid.html' style='color:brown; text-decoration:underline;'>View Place Page</a>").openPopup();
+    </script>
+</body>
+</html>
