@@ -22,6 +22,16 @@
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
         const marker = L.marker([33.7888, -118.3121]).addTo(map);
         marker.bindPopup("<b class='font-serif'>Masjid an-Noor</b><br><br><a href='place-masjid.html' style='color:brown; text-decoration:underline;'>View Place Page</a>").openPopup();
+   
+    // Add to your existing script in map.html
+const marker1 = L.marker([33.7888, -118.3121]).addTo(map);
+marker1.bindPopup("<b>Masjid an-Noor</b><br><a href='place-masjid.html'>View Landscape</a>");
+
+const marker2 = L.marker([34.0040, -118.3300]).addTo(map); // Approximate for South LA
+marker2.bindPopup("<b>Islah LA</b><br><p class='text-xs'>Associated with Anne Milan Ali</p>");
+    
+    
+    
     </script>
 </body>
 </html>
